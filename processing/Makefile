@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bin_helloworld
+# Target rules for targets named bin_processing
 
 # Build rule for target.
-bin_helloworld: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bin_helloworld
-.PHONY : bin_helloworld
+bin_processing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bin_processing
+.PHONY : bin_processing
 
 # fast build rule for target.
-bin_helloworld/fast:
-	$(MAKE) -f CMakeFiles/bin_helloworld.dir/build.make CMakeFiles/bin_helloworld.dir/build
-.PHONY : bin_helloworld/fast
+bin_processing/fast:
+	$(MAKE) -f CMakeFiles/bin_processing.dir/build.make CMakeFiles/bin_processing.dir/build
+.PHONY : bin_processing/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/bin_helloworld.dir/build.make CMakeFiles/bin_helloworld.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/bin_processing.dir/build.make CMakeFiles/bin_processing.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -127,7 +127,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/bin_helloworld.dir/build.make CMakeFiles/bin_helloworld.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/bin_processing.dir/build.make CMakeFiles/bin_processing.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -135,7 +135,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/bin_helloworld.dir/build.make CMakeFiles/bin_helloworld.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/bin_processing.dir/build.make CMakeFiles/bin_processing.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -144,7 +144,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... bin_helloworld"
+	@echo "... bin_processing"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main.o"

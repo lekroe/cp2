@@ -56,38 +56,38 @@ CMAKE_SOURCE_DIR = /home/s-lekroe/cp2/processing
 CMAKE_BINARY_DIR = /home/s-lekroe/cp2/processing
 
 #=============================================================================
-# Target rules for target CMakeFiles/bin_helloworld.dir
+# Target rules for target CMakeFiles/bin_processing.dir
 
 # All Build rule for target.
-CMakeFiles/bin_helloworld.dir/all:
-	$(MAKE) -f CMakeFiles/bin_helloworld.dir/build.make CMakeFiles/bin_helloworld.dir/depend
-	$(MAKE) -f CMakeFiles/bin_helloworld.dir/build.make CMakeFiles/bin_helloworld.dir/build
+CMakeFiles/bin_processing.dir/all:
+	$(MAKE) -f CMakeFiles/bin_processing.dir/build.make CMakeFiles/bin_processing.dir/depend
+	$(MAKE) -f CMakeFiles/bin_processing.dir/build.make CMakeFiles/bin_processing.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/s-lekroe/cp2/processing/CMakeFiles  1
-	@echo "Built target bin_helloworld"
-.PHONY : CMakeFiles/bin_helloworld.dir/all
+	@echo "Built target bin_processing"
+.PHONY : CMakeFiles/bin_processing.dir/all
 
 # Include target in all.
-all: CMakeFiles/bin_helloworld.dir/all
+all: CMakeFiles/bin_processing.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/bin_helloworld.dir/rule: cmake_check_build_system
+CMakeFiles/bin_processing.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/s-lekroe/cp2/processing/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bin_helloworld.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bin_processing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/s-lekroe/cp2/processing/CMakeFiles 0
-.PHONY : CMakeFiles/bin_helloworld.dir/rule
+.PHONY : CMakeFiles/bin_processing.dir/rule
 
 # Convenience name for target.
-bin_helloworld: CMakeFiles/bin_helloworld.dir/rule
-.PHONY : bin_helloworld
+bin_processing: CMakeFiles/bin_processing.dir/rule
+.PHONY : bin_processing
 
 # clean rule for target.
-CMakeFiles/bin_helloworld.dir/clean:
-	$(MAKE) -f CMakeFiles/bin_helloworld.dir/build.make CMakeFiles/bin_helloworld.dir/clean
-.PHONY : CMakeFiles/bin_helloworld.dir/clean
+CMakeFiles/bin_processing.dir/clean:
+	$(MAKE) -f CMakeFiles/bin_processing.dir/build.make CMakeFiles/bin_processing.dir/clean
+.PHONY : CMakeFiles/bin_processing.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/bin_helloworld.dir/clean
+clean: CMakeFiles/bin_processing.dir/clean
 .PHONY : clean
 
 #=============================================================================
