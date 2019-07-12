@@ -46,7 +46,7 @@ for (int i = 0; i < a; ++i){
 //}        
 
   // Zeitschritte durch Abbruchbedingung
-for (int t = 0; t < 1000; ++t){
+for (int t = 0; t < 10000; ++t){
 //Raumelicher Loop, gehe Gitterpunkte durch
   for (int i = 1; i < a-1; ++i){
     for (int j = 1; j < b-1; ++j){
