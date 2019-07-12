@@ -41,7 +41,7 @@ while (delta > 0.01){
 }        
 
 // Ausgabe der Daten
-std::ofstream output_potential0("Potential_rho_0.txt");
+std::ofstream output_potential0("Potential_rho_test.txt");
   for (int i = 0; i < a; ++i){
       for (int k = 0; k < b; ++k){
       output_potential0 << i <<" "<< k <<" "<<phineu[i][5][k]<< std::endl;
