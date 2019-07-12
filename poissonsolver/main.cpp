@@ -16,7 +16,12 @@ int main (int argc, char** argv){
   array<array<array<int,a>,b>,c> phialt;
   array<array<array<int,a>,b>,c> phineu;
 
-  // Anfangsbedingungen
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//rho=0////////////////////
+
+
+  // Randbedingung
 for (int i = 0; i < a; ++i){
   for (int j = 0; j < b; ++j){
     phialt[i][j][0] = 1000;  
@@ -25,28 +30,47 @@ for (int i = 0; i < a; ++i){
 
 
   // Zeitschritte durch Abbruchbedingung
-double delta = 10;
-while (delta > 0.01){
+//double delta = 1;
+//while (delta > 0.1){
   
- //Raumelicher Loop, gehe Gitterpunkte durch 
+// //Raumelicher Loop, gehe Gitterpunkte durch 
+//  for (int i = 1; i < a-1; ++i){
+//    for (int j = 1; j < b-1; ++j){
+//      for (int k = 1; k < c-1; ++k){
+//	phineu[i][j][k] = (1.0/6.0)*(phialt[i+1][j][k] + phialt[i-1][j][k] + phialt[i][j+1][k] + phialt[i][j-1][k] + phialt[i][j][k+1] + phialt[i][j][k-1]); 
+//      delta = sqrt((phineu[i][j][k] - phialt[i][j][k])*(phineu[i][j][k] - phialt[i][j][k]));
+//      phialt[i][j][k] = phineu[i][j][k];
+//      }
+//    }
+//  }
+//}        
+
+  // Zeitschritte durch Abbruchbedingung
+for (int t = 0; t < 1000000; ++t){
+//Raumelicher Loop, gehe Gitterpunkte durch
   for (int i = 1; i < a-1; ++i){
     for (int j = 1; j < b-1; ++j){
-      for (int k = 1; k < c-1; ++k){
-	phineu[i][j][k] = (1.0/6.0)*(phialt[i+1][j][k] + phialt[i-1][j][k] + phialt[i][j+1][k] + phialt[i][j-1][k] + phialt[i][j][k+1] + phialt[i][j][k-1]); 
-      delta = sqrt((phialt[i][j][k] - phineu[i][j][k])*(phialt[i][j][k] - phineu[i][j][k]));
+     for (int k = 1; k < c-1; ++k){
+      phineu[i][j][k] = (1.0/6.0)*(phialt[i+1][j][k] + phialt[i-1][j][k] + phialt[i][j+1][k] + phialt[i][j-1][k] + phialt[i][j][k+1] + phialt[i][j][k-1]);
       phialt[i][j][k] = phineu[i][j][k];
+      t = t+1;
       }
     }
   }
-}        
+}
+
+
+
 
 // Ausgabe der Daten
-std::ofstream output_potential0("Potential_rho_test.txt");
+ofstream output_potential0("Potential_rho_test.txt");
   for (int i = 0; i < a; ++i){
       for (int k = 0; k < b; ++k){
-      output_potential0 << i <<" "<< k <<" "<<phineu[i][10][k]<< std::endl;
+      output_potential0 << i <<" "<< k <<" "<<phineu[i][10][k]<< endl;
       }
   }
 
-} 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////Punktladung mit fester Ladungsdichte//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+}
