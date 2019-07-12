@@ -8,9 +8,9 @@ using namespace std;
 int main (int argc, char** argv){
 
 // Laengen des Gitters festlegen
-  const int a = 50;
-  const int b = 50;
-  const int c = 50;
+  const int a = 10;
+  const int b = 10;
+  const int c = 10;
 // Gitter definieren 
   array<array<array<int,a>,b>,c> rhogitter;
   array<array<array<int,a>,b>,c> phialt;
@@ -42,9 +42,9 @@ while (delta > 0.1){
 
 // Ausgabe der Daten
 std::ofstream output_potential0("Potential_rho_0.txt");
-  for (int i = 0; i < 50; ++i){
-      for (int k = 0; k < 50; ++k){
-      output_potential0 << i <<" "<< k <<" "<<phineu[i][25][k]<< std::endl;
+  for (int i = 0; i < a; ++i){
+      for (int k = 0; k < b; ++k){
+      output_potential0 << i <<" "<< k <<" "<<phineu[i][5][k]<< std::endl;
       }
   }
 
