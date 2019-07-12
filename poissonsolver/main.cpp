@@ -46,7 +46,7 @@ for (int i = 0; i < a; ++i){
 //}        
 
   // Zeitschritte durch Abbruchbedingung
-for (int t = 0; t < 1000000000; ++t){
+for (int t = 0; t < 100000000; ++t){
 //Raumelicher Loop, gehe Gitterpunkte durch
   for (int i = 1; i < a-1; ++i){
     for (int j = 1; j < b-1; ++j){
@@ -63,7 +63,7 @@ for (int t = 0; t < 1000000000; ++t){
 
 
 // Ausgabe der Daten
-ofstream output_potential0("Potential_rho_test.txt");
+ofstream output_potential0("Potential_rho0.txt");
   for (int i = 0; i < a; ++i){
       for (int k = 0; k < b; ++k){
       output_potential0 << i <<" "<< k <<" "<<phineu[i][10][k]<< endl;
