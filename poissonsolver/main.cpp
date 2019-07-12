@@ -26,7 +26,7 @@ for (int i = 0; i < a; ++i){
 
   // Zeitschritte durch Abbruchbedingung
 double delta = 10;
-while (delta > 0.1){
+while (delta > 0.01){
   
  //Raumelicher Loop, gehe Gitterpunkte durch 
   for (int i = 1; i < a-1; ++i){
