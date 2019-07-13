@@ -1,2 +1,2 @@
-	add_executable(bin_processing main.cpp)
+	add_executable(bin_randomwalk main.cpp)
 

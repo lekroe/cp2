@@ -7,11 +7,12 @@ using namespace std;
 
 int main(int argc, char** argv){
     std::mt19937 gen;
-    gen.seed(123);
+    gen.seed(5);
     std::uniform_real_distribution<double> dis(0,1);
     std::vector<int> hector(10000000,0);
-    std::vector<double> timehector(11,0);
+    std::vector<double> timehector(6,0);
 std::vector<double> zahlort(2* timehector.size() +1,0);
+vector<double> hector_x1ave(11,0);
     double a;
     double x1;
     double x1ave;
@@ -39,7 +40,8 @@ std::vector<double> zahlort(2* timehector.size() +1,0);
       }
 
       x1ave = x1*1/hector.size();
-      //cout << x1ave << endl;
+      hector_x1ave[i] = x1ave;
+//      cout << x1ave << endl;
 
 // 2. Moment <x^{2}> ausrechnen
 x2=0;
@@ -48,9 +50,10 @@ x2=0;
       }
 
       x2ave= x2*1/hector.size();
-   //   cout << x2ave << endl;
+      //cout << x2ave << endl;
 // Momente über Zeit in Vektor reinschreiben
     timehector[i] = x2ave;
+  
 
     }
     for (int k=0; k < 2*timehector.size()+1; k++){
@@ -61,11 +64,11 @@ x2=0;
 			zahlort[k]=zahlort[k]+1;
 		}
 	}
-cout << k << ":" << zahlort[k] << endl;
-	    
+    }  
+    
+ofstream out("werte_6zs.txt");
+for (int k = 0; k < 2*timehector.size()+1; k++){
+  out << k-6 << " " << zahlort[k]/10000000 << endl;
+  }
 
-    } 
-   // for(int t = 0; t < timehector.size(); t++){    
-   //  cout << timehector[t] << endl;
-  //  }
 }
