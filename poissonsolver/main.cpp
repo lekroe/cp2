@@ -67,10 +67,10 @@ for(int i = 0; i < a ; i++){
   for( int j = 0; j < b; j++){
      for( int k = 0; k < c; k++){
        if(k == 0){
-	phi2alt[i][j][k] = 1000;
+	phi2alt[i][j][k] = 0;
 	}
        if (i == 10 && j == 10 && k == 10){
-	 phi2alt[i][j][k] = 1000;
+	 phi2alt[i][j][k] = 000;
        }
      }
   }
@@ -107,7 +107,7 @@ for (int t = 0; t < 10000; ++t){
 ofstream output_potential1("Potential_punktladung.txt");
   for (int i = 0; i < a; ++i){
       for (int k = 0; k < b; ++k){
-      output_potential1 << i <<" "<< k <<" "<<phineu[i][10][k]<< endl;
+      output_potential1 << i <<" "<< k <<" "<<phi2neu[i][10][k]<< endl;
       }
   }
 
