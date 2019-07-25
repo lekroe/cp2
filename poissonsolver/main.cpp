@@ -9,9 +9,9 @@ using namespace std;
 int main (int argc, char** argv){
 
 // Laengen des Gitters festlegen
-  const int a = 20;
-  const int b = 20;
-  const int c = 20;
+  const int a = 100;
+  const int b = 100;
+  const int c = 100;
 // Gitter definieren 
   array<array<array<double,a>,b>,c> rhogitter;
   array<array<array<double,a>,b>,c> phialt;
@@ -72,7 +72,7 @@ ofstream output_potential0("Potential_rho0.txt");
 for(int i = 0; i < a; i++){
  for(int j = 0; j < b; j++){
    for(int k= 0; k < c; k++){
-      rhogitter[10][10][10] = 50.0;
+      rhogitter[50][50][50] = 50.0;
     }
   }
 }
@@ -106,12 +106,12 @@ dmax2 = 0;
 ofstream output_potential1("Potential_punktladung.txt");
   for (int i = 0; i < a; ++i){
       for (int k = 0; k < b; ++k){
-      output_potential1 << i <<" "<< k <<" "<<phi2neu[i][10][k]<< endl;
+      output_potential1 << i <<" "<< k <<" "<<phi2neu[i][50][k]<< endl;
       }
   }
 ofstream output_potential2("Potential_punktladung_querschnitt.txt");
   for (int i = 0; i < a; ++i){
-      output_potential2 << i <<" "<<phi2neu[i][10][10]<< endl;
+      output_potential2 << i <<" "<<phi2neu[i][50][50]<< endl;
       }
 
 }

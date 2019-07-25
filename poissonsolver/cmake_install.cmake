@@ -1,4 +1,4 @@
-# Install script for directory: /home/s-lekroe/cp2/randomwalk
+# Install script for directory: /home/s-lekroe/cp2/poissonsolver
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/s-lekroe/cp2/randomwalk/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/s-lekroe/cp2/poissonsolver/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/s-lekroe/cp2/randomwalk/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/s-lekroe/cp2/poissonsolver/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

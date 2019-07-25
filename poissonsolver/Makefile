@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/s-lekroe/cp2/randomwalk
+CMAKE_SOURCE_DIR = /home/s-lekroe/cp2/poissonsolver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/s-lekroe/cp2/randomwalk
+CMAKE_BINARY_DIR = /home/s-lekroe/cp2/poissonsolver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/s-lekroe/cp2/randomwalk/CMakeFiles /home/s-lekroe/cp2/randomwalk/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/s-lekroe/cp2/poissonsolver/CMakeFiles /home/s-lekroe/cp2/poissonsolver/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/s-lekroe/cp2/randomwalk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/s-lekroe/cp2/poissonsolver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bin_randomwalk
+# Target rules for targets named bin_poisson
 
 # Build rule for target.
-bin_randomwalk: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bin_randomwalk
-.PHONY : bin_randomwalk
+bin_poisson: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bin_poisson
+.PHONY : bin_poisson
 
 # fast build rule for target.
-bin_randomwalk/fast:
-	$(MAKE) -f CMakeFiles/bin_randomwalk.dir/build.make CMakeFiles/bin_randomwalk.dir/build
-.PHONY : bin_randomwalk/fast
+bin_poisson/fast:
+	$(MAKE) -f CMakeFiles/bin_poisson.dir/build.make CMakeFiles/bin_poisson.dir/build
+.PHONY : bin_poisson/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/bin_randomwalk.dir/build.make CMakeFiles/bin_randomwalk.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/bin_poisson.dir/build.make CMakeFiles/bin_poisson.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -127,7 +127,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/bin_randomwalk.dir/build.make CMakeFiles/bin_randomwalk.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/bin_poisson.dir/build.make CMakeFiles/bin_poisson.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -135,7 +135,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/bin_randomwalk.dir/build.make CMakeFiles/bin_randomwalk.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/bin_poisson.dir/build.make CMakeFiles/bin_poisson.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -144,7 +144,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... bin_randomwalk"
+	@echo "... bin_poisson"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main.o"
